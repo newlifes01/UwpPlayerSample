@@ -20,9 +20,24 @@ namespace PlayerSample
     {
         public Dictionary<string, string> Protocols { get; } = new Dictionary<string, string>
         {
-            { "HLS", "http://media-lb.tvoli.com/reference-source-asset-no-drm/hls5-any.m3u8" },
-            { "DASH", "http://media-lb.tvoli.com/reference-source-asset-no-drm/Manifest.mpd" },
-            { "SMOOTH", "http://media-lb.tvoli.com/reference-source-asset-no-drm.ism/Manifest" },
+            //Magine samples            
+            { "HLS test Magine", "http://media-lb.magine.com/reference-source-asset-no-drm/hls5-any.m3u8" },
+            { "HLS live test Magine", "http://media-lb.magine.com/135/hls4-any.m3u8" },
+            { "DASH test Magine", "http://media-lb.magine.com/reference-source-asset-no-drm/Manifest.mpd" },
+            { "SMOOTH test Mageine", "http://media-lb.magine.com/reference-source-asset-no-drm.ism/Manifest" },
+            // DASH samples from http://dashif.org/test-vectors/
+            { "DASH SINGLE RESOLUTION MULTI-RATE", "http://dash.edgesuite.net/dash264/TestCases/1a/netflix/exMPD_BIP_TC1.mpd" },
+            { "DASH MULTI-RESOLUTION MULTI-RATE", "http://dash.edgesuite.net/dash264/TestCases/2a/qualcomm/1/MultiResMPEG2.mpd" },
+            { "DASH MULTIPLE AUDIO REPRESENTATIONS", "http://dash.edgesuite.net/dash264/TestCases/3a/fraunhofer/aac-lc_stereo_without_video/ElephantsDream/elephants_dream_audio_only_aaclc_stereo_sidx.mpd" },
+            { "DASH ADDITION OF SUBTITLES", "http://dash.edgesuite.net/dash264/TestCases/4b/qualcomm/1/ED_OnDemand_5SecSeg_Subtitles.mpd" },
+            { "DASH MULTIPLE PERIODS", "http://dash.edgesuite.net/dash264/TestCases/5a/nomor/1.mpd" },
+            { "DASH ENCRYPTION AND KEY ROTATIONS", "http://dash.edgesuite.net/dash264/TestCases/6b/microsoft/CENC_SD_Time/CENC_SD_time_MPD.mpd" },
+            { "DASH DYNAMIC SEGMENT OFFERING", "http://54.72.87.160/stattodyn/statodyn.php?type=mpd&pt=1376172180&tsbd=120&origmpd=http%3A%2F%2Fdash.edgesuite.net%2Fdash264%2FTestCases%2F1b%2Fqualcomm%2F2%2FMultiRate.mpd&php=http%3A%2F%2Fdasher.eu5.org%2Fstatodyn.php&mpd=&debug=0&hack=.mpd" },
+            { "DASH DYNAMIC SEGMENT OFFERING WITH MPD UPDATE", "http://tvnlive.dashdemo.edgesuite.net/live/manifest.mpd" },
+            { "DASH ADDITION OF TRICK MODE", "http://dash.edgesuite.net/dash264/TestCases/9a/qualcomm/1/MultiRate.mpd" },
+            { "DASH MULTIPLE TRACK CONTENT", "http://dash.edgesuite.net/dash264/TestCases/10a/1/iis_forest_short_poem_multi_lang_480p_single_adapt_aaclc_sidx.mpd" },
+            { "DASH HIGH DEFINITION SINGLE RESOLUTION MULTI-RATE", "http://dash.edgesuite.net/dash264/TestCasesHD/1a/qualcomm/1/MultiRate.mpd" },
+            { "DASH HIGH DEFINITION MULTI-RESOLUTION MULTI-RATE", "http://dash.edgesuite.net/dash264/TestCasesHD/2a/qualcomm/1/MultiResMPEG2.mpd" },
         };
 
         public MainPage()
@@ -64,7 +79,7 @@ namespace PlayerSample
                 AreTransportControlsEnabled = true,
                 VerticalAlignment = VerticalAlignment.Stretch,
                 HorizontalAlignment = HorizontalAlignment.Stretch,
-                TransportControls = new MediaTransportControls { IsCompact = true }
+                TransportControls = new MediaTransportControls { IsCompact = false }
             };
 #endif
             Grid.SetRow(_playerControl, 1);

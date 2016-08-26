@@ -1,6 +1,6 @@
 Build and tested with:
-* Windows 10 Version 1511 (OS Build 14295.1005)   
-* Microsoft Visual Studio Enterpriae 2015 Update 2    
+* Windows 10 Version 1607 (OS Build 14905.1000)   
+* Microsoft Visual Studio Enterpriae 2015 Update 3    
       
 Install additional packages needed for PlayerFramework:   
 * [Player Framework](http://playerframework.codeplex.com/)     
